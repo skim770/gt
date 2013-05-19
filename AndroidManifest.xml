@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gt.georgiatech"
+    android:versionCode="3"
+    android:versionName="1.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.gt.georgiatech.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gt.georgiatech.Buzzport" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.TSquare" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.BusSchedule_Auto" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.BusSchedule_Manual" ></activity>
+        <activity 
+            android:name="com.gt.georgiatech.Courseoff" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Mail" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Calendar" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Critique" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Stingerette" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Buzzcard" ></activity>
+        <activity 
+            android:name="com.gt.georgiatech.Reserve"></activity>
+        <activity
+            android:name="com.gt.georgiatech.Careers" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.GPA" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Login" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.About" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.Intro" ></activity>
+        <activity
+            android:name="com.gt.georgiatech.LoginTester" ></activity>
+    </application>
+
+</manifest>

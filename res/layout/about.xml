@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"/>
+
+	<TextView
+	    android:id="@+id/tvVersion"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Version"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvDevHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"        
+        android:text="Developer"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvDevelopers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sung Kim"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvGDHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Graphic Designer"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:layout_gravity="center"
+        android:paddingTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tvGDmember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casey Chae"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvFeedbackHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Feedbacks To"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="center"
+    	android:paddingTop="30dp" />
+    
+    <TextView 
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="skim928@gatech.edu"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="center" />
+    
+    <TextView
+        android:id="@+id/tvDisclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disclaimer: "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+    	android:paddingTop="15dp"
+    	android:paddingLeft="15dp"
+    	android:paddingRight="15dp" />
+
+</LinearLayout>

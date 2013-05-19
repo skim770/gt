@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none" >
+    
+    <!-- Current Official GPA -->
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="100" >
+		<TextView 
+		    android:id="@+id/tvCurrentGPA"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="20"
+		    android:text="Current Official GPA:"
+		    android:paddingTop="10dp"
+		    android:paddingLeft="10dp"
+		    android:ems="15" />
+		<EditText 
+		    android:id="@+id/etCurrentGPA"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="80"
+		    android:ems="15"
+		    android:inputType="numberDecimal"
+		    android:hint="0.0" >
+		    <requestFocus/></EditText>
+	</LinearLayout>
+	
+	<!-- Current Credit Hours -->
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="100" >
+		<TextView 
+		    android:id="@+id/tvCurrentCredits"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="20"
+		    android:text="Current Total Credit Hours:"
+		    android:paddingTop="10dp"
+		    android:paddingLeft="10dp"
+		    android:ems="15" />
+		<EditText 
+		    android:id="@+id/etCurrentCredits"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="80"
+		    android:ems="15"
+		    android:inputType="number"
+		    android:hint="0" >
+		    <requestFocus/></EditText>
+	</LinearLayout>
+	
+	<!-- Current Credit Hours that don't count -->
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="100" >
+		<TextView 
+		    android:id="@+id/tvCreditless"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="20"
+		    android:text="Total Credit Hours not towards GPA (include this semester):"
+		    android:paddingTop="10dp"
+		    android:paddingLeft="10dp"
+		    android:ems="15"
+		    android:textSize="10sp" />
+		<EditText 
+		    android:id="@+id/etCreditless"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="80"
+		    android:ems="15"
+		    android:inputType="number"
+		    android:hint="0" >
+		    <requestFocus/></EditText>
+	</LinearLayout>
+	
+	<!-- Projected GPA/Credits -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:weightSum="100" >
+	    <TextView 
+	        android:id="@+id/tvProjGPAh"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="30"
+	        android:ems="15"
+	        android:paddingTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:text="Your Projected GPA/Credits:" />
+	    <TextView 
+	        android:id="@+id/tvProjGPA"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="70"
+	        android:ems="15"
+	        android:paddingTop="10dp"
+	        android:paddingRight="10dp" />
+	</LinearLayout>
+
+	<!-- Calculate/Clear Buttons -->
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="40dp"
+	    android:orientation="horizontal"
+	    android:weightSum="100"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+		<Button
+	    	android:id="@+id/bSubmit"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+	    	android:text="Calculate!"
+	    	android:layout_weight="85" />
+		<Button
+		    android:id="@+id/bClear"
+	    	android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:text="Clear"
+	    	android:layout_weight="15" />
+    </LinearLayout>
+    
+	<!-- Headers -->
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <TextView 
+	        android:id="@+id/tvNameh"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:ems="15"
+	        android:text="Class Name" />
+	    <TextView 
+	        android:id="@+id/tvCredith"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:ems="15"
+	        android:text="Credit" />
+	    <TextView 
+	        android:id="@+id/tvGradeh"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:ems="15"
+	        android:text="Grade" />
+	</LinearLayout>
+	
+	<!-- Slot 1 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <EditText
+	        android:id="@+id/etName1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:inputType="textNoSuggestions"
+	        android:hint="Class Name"
+	        android:textSize="15dp" />
+	    <EditText
+	        android:id="@+id/etCredit1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="number"
+	        android:hint="0" />
+	    <EditText
+	        android:id="@+id/etGrade1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="textCapCharacters"
+	        android:hint="A" />
+	</LinearLayout>
+	
+	<!-- Slot 2 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <EditText
+	        android:id="@+id/etName2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:inputType="textNoSuggestions"
+	        android:hint="Class Name"
+	        android:textSize="15dp" />
+	    <EditText
+	        android:id="@+id/etCredit2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="number"
+	        android:hint="0" />
+	    <EditText
+	        android:id="@+id/etGrade2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="textCapCharacters"
+	        android:hint="A" />
+	</LinearLayout>
+	
+	<!-- Slot 3 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <EditText
+	        android:id="@+id/etName3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:inputType="textNoSuggestions"
+	        android:hint="Class Name"
+	        android:textSize="15dp" />
+	    <EditText
+	        android:id="@+id/etCredit3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="number"
+	        android:hint="0" />
+	    <EditText
+	        android:id="@+id/etGrade3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="textCapCharacters"
+	        android:hint="A" />
+	</LinearLayout>
+	
+	<!-- Slot 4 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <EditText
+	        android:id="@+id/etName4"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:inputType="textNoSuggestions"
+	        android:hint="Class Name"
+	        android:textSize="15dp" />
+	    <EditText
+	        android:id="@+id/etCredit4"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="number"
+	        android:hint="0" />
+	    <EditText
+	        android:id="@+id/etGrade4"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="textCapCharacters"
+	        android:hint="A" />
+	</LinearLayout>
+	
+	<!-- Slot 5 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <EditText
+	        android:id="@+id/etName5"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:inputType="textNoSuggestions"
+	        android:hint="Class Name"
+	        android:textSize="15dp" />
+	    <EditText
+	        android:id="@+id/etCredit5"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="number"
+	        android:hint="0" />
+	    <EditText
+	        android:id="@+id/etGrade5"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="textCapCharacters"
+	        android:hint="A" />
+	</LinearLayout>
+	
+	<!-- Slot 6 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:weightSum="100"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+	    <EditText
+	        android:id="@+id/etName6"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:inputType="textNoSuggestions"
+	        android:hint="Class Name"
+	        android:textSize="15dp" />
+	    <EditText
+	        android:id="@+id/etCredit6"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="number"
+	        android:hint="0" />
+	    <EditText
+	        android:id="@+id/etGrade6"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="40"
+	        android:inputType="textCapCharacters"
+	        android:hint="A" />
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp">
+	    <TextView
+	        android:id="@+id/tvGPADisclaimer"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+	</LinearLayout>
+	
+</LinearLayout>
